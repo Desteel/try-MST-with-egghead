@@ -1,0 +1,22 @@
+.list {
+  ul {
+    list-style: none;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid grey;
+  padding: 10px;
+  margin-bottom: 15px;
+
+  img {
+    max-width: 100px;
+    margin-right: 20px;
+  }
+}  
+
+.total {
+  text-align: center;
+}
