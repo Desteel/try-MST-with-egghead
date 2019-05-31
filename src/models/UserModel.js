@@ -12,7 +12,7 @@ const UserModel = types
     .actions(self => ({
         getSuggestions: flow(function*() {
             const response = yield window.fetch(
-                `http://localhost:3000/suggestions_${self.gender}`
+                `http://localhost:3000/${self.id}`
             );
             const suggestions = yield response.json();
             self.wishList.items = [...self.wishList.items, ...suggestions];

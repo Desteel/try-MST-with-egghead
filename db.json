@@ -1,29 +1,41 @@
 {
-    "suggestions_f": [
+    "a1": [
         {
-            "name": "group A AAA",
+            "name": "Homer AAA",
             "price": 10.31,
             "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-3.png?8"
         },
         {
-            "name": "group A BBB",
+            "name": "Homer BBB",
             "price": 10.31,
             "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-2.png?8"
         },
         {
-            "name": "group A CCC",
+            "name": "Homer CCC",
             "price": 10.31,
             "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-5.png?8"
         }
     ],
-    "suggestions_m": [
+    "a2": [
         {
-            "name": "group B AAA",
+            "name": "Marge AAA",
             "price": 10.31,
             "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-1.png?8"
         },
         {
-            "name": "group B BBB",
+            "name": "Marge BBB",
+            "price": 10.31,
+            "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-4.png?8"
+        }
+    ],
+    "a3": [
+        {
+            "name": "Bart AAA",
+            "price": 10.31,
+            "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-1.png?8"
+        },
+        {
+            "name": "Bart BBB",
             "price": 10.31,
             "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-4.png?8"
         }
