@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import WishListView from "./WishListView";
+import Select from "./Select";
 
 class App extends Component {
     constructor(props) {
@@ -23,14 +24,7 @@ class App extends Component {
 
         return (
             <>
-                <select onChange={this.onSelectUser}>
-                    <option>- select user -</option>
-                    {[...group.users.values()].map(user => (
-                        <option key={user.id} value={user.id}>
-                            {user.name}
-                        </option>
-                    ))}
-                </select>
+                <Select group={group} handleChange={this.onSelectUser} />
                 {selectedUser && (
                     <WishListView wishList={selectedUser.wishList} />
                 )}

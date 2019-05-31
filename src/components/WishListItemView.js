@@ -7,7 +7,6 @@ import WishListItemEdit from "./WishListItemEdit";
 class WishListItemView extends Component {
     constructor() {
         super();
-
         this.state = {
             isEditing: false,
             clone: null

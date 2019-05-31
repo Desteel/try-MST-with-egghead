@@ -5,25 +5,24 @@ import WishListItemModel from "../models/WishListItemModel";
 
 import WishListItemEdit from "./WishListItemEdit";
 
+const entryData = {
+    name: "",
+    price: 0
+};
+
 class WishListItemEntry extends Component {
     constructor() {
         super();
 
         this.state = {
-            entry: WishListItemModel.create({
-                name: "",
-                price: 0
-            })
+            entry: WishListItemModel.create(entryData)
         };
     }
 
     onAdd = () => {
         this.props.wishList.add(this.state.entry);
         this.setState({
-            entry: WishListItemModel.create({
-                name: "",
-                price: 0
-            })
+            entry: WishListItemModel.create(entryData)
         });
     };
 

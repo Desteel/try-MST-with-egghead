@@ -18,17 +18,17 @@ class WishListItemEdit extends Component {
 
         return (
             <div className="item-edit">
-                Thing:{" "}
+                Thing:
                 <input value={item.name} onChange={this.onChange} name="name" />
                 <br />
-                Price:{" "}
+                Price:
                 <input
                     value={item.price}
                     onChange={this.onChange}
                     name="price"
                 />
                 <br />
-                Image:{" "}
+                Image:
                 <input
                     value={item.image}
                     onChange={this.onChange}
