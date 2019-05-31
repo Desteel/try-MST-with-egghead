@@ -10,13 +10,23 @@ const UserModel = types
         wishList: types.optional(WishListModel, {})
     })
     .actions(self => ({
-        getSuggestions: flow(function*() {
-            const response = yield window.fetch(
+        async getSuggestions() {
+            // window
+            //     .fetch(`http://localhost:3000/suggestions_${self.gender}`)
+            //     .then(response => response.json())
+            //     .then(suggestions => {
+            //         self.addSuggestions(suggestions);
+            //     });
+
+            const response = await window.fetch(
                 `http://localhost:3000/suggestions_${self.gender}`
             );
-            const suggestions = yield response.json();
+            const suggestions = await response.json();
+            self.addSuggestions(suggestions);
+        },
+        addSuggestions(suggestions) {
             self.wishList.items = [...self.wishList.items, ...suggestions];
-        })
+        }
     }));
 
 export default UserModel;

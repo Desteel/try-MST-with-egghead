@@ -6,7 +6,7 @@ class WishListItemEdit extends Component {
         let { name, value } = e.target;
 
         if (name === "price") {
-            const price = parseInt(value);
+            const price = parseInt(value, 10);
             !isNaN(price) && this.props.item.changeValue(name, price);
         }
 

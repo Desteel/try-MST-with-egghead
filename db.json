@@ -1,0 +1,31 @@
+{
+    "suggestions_f": [
+        {
+            "name": "group A AAA",
+            "price": 10.31,
+            "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-3.png?8"
+        },
+        {
+            "name": "group A BBB",
+            "price": 10.31,
+            "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-2.png?8"
+        },
+        {
+            "name": "group A CCC",
+            "price": 10.31,
+            "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-5.png?8"
+        }
+    ],
+    "suggestions_m": [
+        {
+            "name": "group B AAA",
+            "price": 10.31,
+            "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-1.png?8"
+        },
+        {
+            "name": "group B BBB",
+            "price": 10.31,
+            "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-4.png?8"
+        }
+    ]
+}
