@@ -1,5 +1,5 @@
-import { types, destroy } from "mobx-state-tree";
-import WishListItemModel from "./WishListItemModel";
+import { types, destroy } from 'mobx-state-tree';
+import WishListItemModel from './WishListItemModel';
 
 const WishListModel = types
     .model({

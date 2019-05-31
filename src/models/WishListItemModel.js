@@ -1,10 +1,10 @@
-import { types, getParent } from "mobx-state-tree";
+import { types, getParent } from 'mobx-state-tree';
 
 const WishListItemModel = types
     .model({
         name: types.string,
         price: types.number,
-        image: types.optional(types.string, "")
+        image: types.optional(types.string, '')
     })
     .actions(self => ({
         changeValue(name, newValue) {

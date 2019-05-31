@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import WishListView from "./WishListView";
-import Select from "./Select";
+import WishListView from './WishListView';
+import Select from './Select';
 
 class App extends Component {
     constructor(props) {

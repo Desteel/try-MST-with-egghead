@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { observer } from "mobx-react";
+import React, { Component } from 'react';
+import { observer } from 'mobx-react';
 
 class WishListItemEdit extends Component {
     onChange = e => {
         let { name, value } = e.target;
 
-        if (name === "price") {
+        if (name === 'price') {
             const price = parseInt(value, 10);
             !isNaN(price) && this.props.item.changeValue(name, price);
         }

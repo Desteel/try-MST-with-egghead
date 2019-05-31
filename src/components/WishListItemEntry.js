@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { observer } from "mobx-react";
+import React, { Component } from 'react';
+import { observer } from 'mobx-react';
 
-import WishListItemModel from "../models/WishListItemModel";
+import WishListItemModel from '../models/WishListItemModel';
 
-import WishListItemEdit from "./WishListItemEdit";
+import WishListItemEdit from './WishListItemEdit';
 
 const entryData = {
-    name: "",
+    name: '',
     price: 0
 };
 

@@ -1,8 +1,8 @@
-import React from "react";
-import { observer } from "mobx-react";
+import React from 'react';
+import { observer } from 'mobx-react';
 
-import WishListItemView from "./WishListItemView";
-import WishListItemEntry from "./WishListItemEntry";
+import WishListItemView from './WishListItemView';
+import WishListItemEntry from './WishListItemEntry';
 
 const WishListView = ({ wishList }) => {
     return (

@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { observer } from "mobx-react";
-import { clone, getSnapshot, applySnapshot } from "mobx-state-tree";
+import React, { Component } from 'react';
+import { observer } from 'mobx-react';
+import { clone, getSnapshot, applySnapshot } from 'mobx-state-tree';
 
-import WishListItemEdit from "./WishListItemEdit";
+import WishListItemEdit from './WishListItemEdit';
 
 class WishListItemView extends Component {
     constructor() {
