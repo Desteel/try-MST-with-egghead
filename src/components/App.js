@@ -26,12 +26,24 @@ class App extends Component {
             <>
                 <Select group={group} handleChange={this.onSelectUser} />
                 {selectedUser && (
-                    <WishListView wishList={selectedUser.wishList} />
+                    <>
+                        <WishListView wishList={selectedUser.wishList} />
+                        <button onClick={selectedUser.getSuggestions}>
+                            Suggestions
+                        </button>
+                        <hr />
+                        <h2>
+                            {selectedUser.recipient
+                                ? selectedUser.recipient.name
+                                : ''}
+                        </h2>
+                    </>
                 )}
-                {selectedUser && (
-                    <button onClick={selectedUser.getSuggestions}>
-                        Suggestions
-                    </button>
+                {selectedUser && selectedUser.recipient && (
+                    <WishListView
+                        wishList={selectedUser.recipient.wishList}
+                        readonly
+                    />
                 )}
             </>
         );

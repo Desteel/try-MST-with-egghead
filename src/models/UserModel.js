@@ -4,10 +4,11 @@ import WishListModel from './WishListModel';
 
 const UserModel = types
     .model({
-        id: types.string,
+        id: types.identifier,
         name: types.string,
         gender: types.enumeration('gender', ['m', 'f']),
-        wishList: types.optional(WishListModel, {})
+        wishList: types.optional(WishListModel, {}),
+        recipient: types.maybe(types.reference(types.late(() => UserModel)))
     })
     .actions(self => ({
         getSuggestions: flow(function*() {
@@ -18,5 +19,10 @@ const UserModel = types
             self.wishList.items = [...self.wishList.items, ...suggestions];
         })
     }));
+// .views(self => ({
+//     get other() {
+//         return getParent(self).get(self.recipient);
+//     }
+// }))
 
 export default UserModel;

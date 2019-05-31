@@ -11,6 +11,8 @@ const WishListItemModel = types
             self[name] = newValue;
         },
         remove() {
+            console.log(getParent(self, 1));
+            console.log(getParent(self, 2));
             getParent(self, 2).remove(self);
         }
     }));

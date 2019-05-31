@@ -7,10 +7,10 @@ import App from './components/App';
 
 import { groupStore } from './stores/GroupStore';
 
-addMiddleware(groupStore, (call, next) => {
-    console.log(`[${call.type}] ${call.name}`);
-    return next(call);
-});
+// addMiddleware(groupStore, (call, next) => {
+//     console.log(`[${call.type}] ${call.name}`);
+//     return next(call);
+// });
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(<App group={groupStore} />, rootElement);

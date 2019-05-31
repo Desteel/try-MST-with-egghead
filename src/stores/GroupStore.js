@@ -5,22 +5,26 @@ const initialState = {
         a1: {
             id: 'a1',
             name: 'Homer',
-            gender: 'm'
+            gender: 'm',
+            recipient: 'a4'
         },
         a2: {
             id: 'a2',
             name: 'Marge',
-            gender: 'f'
+            gender: 'f',
+            recipient: 'a1'
         },
         a3: {
             id: 'a3',
             name: 'Bart',
-            gender: 'm'
+            gender: 'm',
+            recipient: 'a2'
         },
         a4: {
             id: 'a4',
             name: 'Lisa',
-            gender: 'f'
+            gender: 'f',
+            recipient: 'a3'
         }
     }
 };
