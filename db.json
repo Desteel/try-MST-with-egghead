@@ -39,5 +39,35 @@
             "price": 10.31,
             "image": "https://mir-kubikov.ru/promo/starwars20years/images/per-4.png?8"
         }
-    ]
+    ],
+    "users": {
+        "a1": {
+            "id": "a1",
+            "name": "Homer",
+            "gender": "m",
+            "wishList": { "items": [] },
+            "recipient": "a4"
+        },
+        "a2": {
+            "id": "a2",
+            "name": "Marge",
+            "gender": "f",
+            "wishList": { "items": [] },
+            "recipient": "a1"
+        },
+        "a3": {
+            "id": "a3",
+            "name": "Bart",
+            "gender": "m",
+            "wishList": { "items": [] },
+            "recipient": "a2"
+        },
+        "a4": {
+            "id": "a4",
+            "name": "Lisa",
+            "gender": "f",
+            "wishList": { "items": [] },
+            "recipient": "a3"
+        }
+    }
 }

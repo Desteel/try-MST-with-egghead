@@ -19,10 +19,5 @@ const UserModel = types
             self.wishList.items = [...self.wishList.items, ...suggestions];
         })
     }));
-// .views(self => ({
-//     get other() {
-//         return getParent(self).get(self.recipient);
-//     }
-// }))
 
 export default UserModel;
