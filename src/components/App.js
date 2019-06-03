@@ -24,6 +24,7 @@ class App extends Component {
 
         return (
             <>
+                <button onClick={group.reload}>reload</button>
                 <Select group={group} handleChange={this.onSelectUser} />
                 {selectedUser && (
                     <>

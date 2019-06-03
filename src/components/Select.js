@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Select = ({ group, handleChange }) => {
+    console.log([...group.users.values()]);
     return (
         <select onChange={handleChange}>
             <option>- select user -</option>
