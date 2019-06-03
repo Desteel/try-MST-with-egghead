@@ -15,18 +15,14 @@ const GroupModel = types
                 const response = yield window.fetch(
                     'http://localhost:3000/users'
                 );
-
                 applySnapshot(self.users, yield response.json());
+                console.log([...self.users.values()]);
             }),
             reload() {
-                // if (controller) controller.abort();
                 self.load();
-            },
-            beforeDestroy() {
-                // if (controller) controller.abort();
             }
         })
-        //     {
+        // {
         //     let controller;
 
         //     return {
@@ -34,7 +30,7 @@ const GroupModel = types
         //             self.load();
         //         },
         //         load: flow(function* load() {
-        //             window.AbortController();
+        //             controller = new AbortController();
         //             try {
         //                 const response = yield window.fetch(
         //                     'http://localhost:3000/users',
@@ -44,6 +40,7 @@ const GroupModel = types
         //                 );
 
         //                 applySnapshot(self.users, yield response.json());
+        //                 console.log('success');
         //             } catch (e) {
         //                 console.log('aborted', e.name);
         //             }

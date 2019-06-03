@@ -1,7 +1,7 @@
+import { observer } from 'mobx-react';
 import React from 'react';
 
 const Select = ({ group, handleChange }) => {
-    console.log([...group.users.values()]);
     return (
         <select onChange={handleChange}>
             <option>- select user -</option>
@@ -15,4 +15,4 @@ const Select = ({ group, handleChange }) => {
     );
 };
 
-export default Select;
+export default observer(Select);
