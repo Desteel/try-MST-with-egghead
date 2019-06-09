@@ -1,4 +1,4 @@
-import { types, flow } from 'mobx-state-tree';
+import { types, flow, getSnapshot } from 'mobx-state-tree';
 
 import WishListModel from './WishListModel';
 
@@ -17,6 +17,19 @@ const UserModel = types
             );
             const suggestions = yield response.json();
             self.wishList.items = [...self.wishList.items, ...suggestions];
+        }),
+        save: flow(function* save() {
+            try {
+                yield window.fetch(`http://localhost:3000/users/${self.id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(getSnapshot(self))
+                });
+            } catch (e) {
+                console.error(e);
+            }
         })
     }));
 

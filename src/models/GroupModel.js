@@ -7,21 +7,38 @@ const GroupModel = types
         users: types.map(UserModel)
     })
     .actions(
-        self => ({
-            afterCreate() {
-                self.load();
-            },
-            load: flow(function* load() {
-                const response = yield window.fetch(
-                    'http://localhost:3000/users'
-                );
-                applySnapshot(self.users, yield response.json());
-                console.log([...self.users.values()]);
-            }),
-            reload() {
-                self.load();
-            }
-        })
+        self => {
+            let controller;
+
+            return {
+                afterCreate() {
+                    self.load();
+                },
+                load: flow(function* load() {
+                    try {
+                        controller = new AbortController();
+                        const response = yield window.fetch(
+                            'http://localhost:3000/users',
+                            {
+                                signal: controller.signal
+                            }
+                        );
+                        applySnapshot(self.users, yield response.json());
+                        console.log('success');
+                        console.log([...self.users.values()]);
+                    } catch (e) {
+                        console.log('aborted', e.name);
+                    }
+                }),
+                reload() {
+                    controller && controller.abort();
+                    self.load();
+                },
+                beforeDestroy() {
+                    controller && controller.abort();
+                }
+            };
+        }
         // {
         //     let controller;
 
